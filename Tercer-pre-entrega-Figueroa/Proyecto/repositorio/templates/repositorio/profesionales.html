@@ -1,0 +1,33 @@
+{% extends "repositorio/index.html" %}
+
+
+{% block titulo %}
+<h1 class="mb-5">Profesionales</h1>  
+<h2 class="mb-5">Contamos con los mejores profesionales</h2>                               
+{% endblock titulo %}
+
+
+{% block contenido %}
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Nombre</th>
+            <th>Apellido</th>
+            <th>Profesion</th>
+        </tr>
+    </thead>
+    <tbody>
+    {% for p in profesionales  %}
+        <tr>
+            <td>{{ p.id }}</td>
+            <td>{{ p.nombre }}</td>
+            <td>{{ p.apellido }}</td>
+            <td>{{ p.profesion }}</td>
+            <td>        
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>
+{% endblock contenido %}
